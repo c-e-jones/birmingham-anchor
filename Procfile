@@ -1,0 +1,1 @@
+web: gunicorn birmingham_anchor.wsgi
