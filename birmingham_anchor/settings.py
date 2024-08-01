@@ -33,7 +33,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['.codeinstitute-ide.net',
                 '.gitpod.io',
-                '.herokuapp.com',]
+                '.herokuapp.com',
+                'https://8000-cejones-birminghamancho-purerblngl7.ws.codeinstitute-ide.net',]
 
 
 # Application definition
