@@ -5,12 +5,5 @@ from .models import Event
 
 # Create your views here.
 
-class HomePage(TemplateView):
-    """
-    Displays home page "
-    """ 
-    template_name = 'index.html'
-
-
 class EventList(generic.EventView):
     model = Event
