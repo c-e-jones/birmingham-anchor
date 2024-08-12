@@ -5,4 +5,4 @@ from .models import Event
 # Create your views here.
 
 class EventList(generic.ListView):
-    model = Post
+    model = Event
