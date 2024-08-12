@@ -61,7 +61,7 @@ class Event(models.Model):
         help_text="The postcode of your event address"
     )
     Online = models.CharField(
-        max_length=2,
+        max_length=7,
         choices=ONLINEOFFILINE_CHOICE,
         default="Offline",
         help_text="Whether your event is online or offline"
