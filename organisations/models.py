@@ -62,7 +62,7 @@ class Event(models.Model):
         help_text="The postcode of your event address"
     )
     Online = models.CharField(
-        max-length=2,
+        max_length=2,
         choices=ONLINEOFFLINE_CHOICE,
         default="Offline",
         help_text="Whether your event is online or offline"
@@ -71,9 +71,9 @@ class Event(models.Model):
         help_text="What date is your event being held?"
     )
     EventTime = models.CharField(
-        max-length=24,
-        choices=TIMEOFDAY_CHOICES
-        default="What time of day is this event being held?"
+        max_length=24,
+        choices=TIMEOFDAY_CHOICES,
+        default=0
     )
     EventDescription = models.CharField(
         max_length=400,
