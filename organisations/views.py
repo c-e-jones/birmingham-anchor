@@ -1,10 +1,8 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views import generic
+from .models import Event
 
 # Create your views here.
 
-class HomePage(TemplateView):
-    """
-    Displays home page "
-    """ 
-    template_name = 'index.html'
+class EventList(generic.ListView):
+    model = Post
