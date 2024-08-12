@@ -43,6 +43,80 @@ class Event(models.Model):
         ("Offline", "Offline")
     ]
 
+    POSTCODE_CHOICES = [
+        # This is a selector for Birmingham postcodes,
+        # designed to restrict selections for Birmingham
+        # only. There are more elegant ways of achieving this
+        # however this is the MVP form. Any omitted postcode
+        # startpoints are intentional - eg, B22 does not exist,
+        # and a number of postcodes do not lie within anyone's
+        # conception of Birmingham.
+        ("B1", "B1"),
+        ("B2", "B2"),
+        ("B3", "B3"),
+        ("B4", "B4"),
+        ("B5", "B5"),
+        ("B6", "B6"),
+        ("B7", "B7"),
+        ("B8", "B8"),
+        ("B9", "B9"),
+        ("B10", "B10"),
+        ("B11", "B11"),
+        ("B12", "B12"),
+        ("B13", "B13"),
+        ("B14", "B14"),
+        ("B15", "B15"),
+        ("B16", "B16"),
+        ("B17", "B17"),
+        ("B18", "B18"),
+        ("B19", "B19"),
+        ("B20", "B20"),
+        ("B21", "B21"),
+        ("B23", "B23"),
+        ("B24", "B24"),
+        ("B25", "B25"),
+        ("B26", "B26"),
+        ("B27", "B27"),
+        ("B28", "B28"),
+        ("B29", "B29"),
+        ("B30", "B30"),
+        ("B31", "B31"),
+        ("B32", "B32"),
+        ("B33", "B33"),
+        ("B34", "B34"),
+        ("B35", "B35"),
+        ("B36", "B36"),
+        ("B37", "B37"),
+        ("B38", "B38"),
+        ("B40", "B40"),
+        ("B42", "B42"),
+        ("B43", "B43"),
+        ("B44", "B44"),
+        ("B45", "B45"),
+        ("B62", "B62"),
+        ("B63", "B63"),
+        ("B64", "B64"),
+        ("B65", "B65"),
+        ("B66", "B66"),
+        ("B67", "B67"),
+        ("B68", "B68"),
+        ("B69", "B69"),
+        ("B70", "B70"),
+        ("B71", "B71"),
+        ("B72", "B72"),
+        ("B73", "B73"),
+        ("B74", "B74"),
+        ("B75", "B75"),
+        ("B76", "B76"),
+        ("B90", "B90"),
+        ("B91", "B91"),
+        ("B92", "B92"),
+        ("B93", "B93"),
+        ("B94", "B94"),
+        ("B96", "B96"),
+        ("B97", "B97"),
+        ("B98", "B98"),
+    ]
 
     EventName = models.TextField(
         max_length=200,
@@ -56,9 +130,16 @@ class Event(models.Model):
         max_length=150,
         help_text="The second line of your event address"
     )
-    Postcode = models.TextField(
+    Postcode_1 = models.TextField(
+        max_length=3,
+        choices=POSTCODE_CHOICES,
+        help_text="The postcode district selector of your event address"
+        default="0"
+    )
+    Postcode_2 = models.TextField(
         max_length=8,
-        help_text="The postcode of your event address"
+        default="1BB"
+        help_text="The rest of the postcode for of your event address"
     )
     Online = models.CharField(
         max_length=7,
@@ -73,6 +154,7 @@ class Event(models.Model):
         max_length=24,
         choices=TIMEOFDAY_CHOICES,
         default=0
+        help_text="What time of day is your event being held?"
     )
     EventDescription = models.CharField(
         max_length=400,
