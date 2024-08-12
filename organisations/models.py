@@ -38,7 +38,7 @@ class Event(models.Model):
     ONLINEOFFILINE_CHOICE = [
         # Represents whether the event is being held
         # digitally or physically.
-        
+
         ("Online", "Online"),
         ("Offline", "Offline")
     ]
@@ -62,7 +62,7 @@ class Event(models.Model):
     )
     Online = models.CharField(
         max_length=2,
-        choices=ONLINEOFFLINE_CHOICE,
+        choices=ONLINEOFFILINE_CHOICE,
         default="Offline",
         help_text="Whether your event is online or offline"
     )
