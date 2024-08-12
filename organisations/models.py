@@ -3,10 +3,10 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Event(models.Model):
-    """
-    Represents the time of day selections possible for
-    an event.
-    """
+    
+    # Represents the time of day selections possible for
+    # an event.
+    
     
     TIMEOFDAY_CHOICES = [
         ("06:00", "6AM"),
@@ -36,10 +36,9 @@ class Event(models.Model):
     ]
 
     ONLINEOFFILINE_CHOICE = [
-        """
-        Represents whether the event is being held
-        digitally or physically.
-        """
+        # Represents whether the event is being held
+        # digitally or physically.
+        
         ("Online", "Online"),
         ("Offline", "Offline")
     ]
