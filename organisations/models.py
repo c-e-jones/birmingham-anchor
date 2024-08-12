@@ -133,12 +133,12 @@ class Event(models.Model):
     Postcode_1 = models.TextField(
         max_length=3,
         choices=POSTCODE_CHOICES,
-        help_text="The postcode district selector of your event address"
+        help_text="The postcode district selector of your event address",
         default="0"
     )
     Postcode_2 = models.TextField(
         max_length=8,
-        default="1BB"
+        default="1BB",
         help_text="The rest of the postcode for of your event address"
     )
     Online = models.CharField(
@@ -153,7 +153,7 @@ class Event(models.Model):
     EventTime = models.CharField(
         max_length=24,
         choices=TIMEOFDAY_CHOICES,
-        default=0
+        default=0,
         help_text="What time of day is your event being held?"
     )
     EventDescription = models.CharField(
