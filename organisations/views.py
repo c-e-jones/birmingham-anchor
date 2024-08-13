@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Event
+from organisations.models import Event
 
 # Create your views here.
 
@@ -10,4 +10,4 @@ class EventList(generic.ListView):
 def frontpage(request):
     events = Event.objects.all
     
-    return render(request, 'core/event_list.html')
+    return render(request, '/event_list.html' {'events': events})
