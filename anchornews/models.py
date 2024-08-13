@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-class Post(models.model):
+class Post(models.Model):
     # This is the data model for posts
     title = models.CharField(
         max_length=150
