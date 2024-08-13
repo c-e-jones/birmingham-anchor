@@ -118,7 +118,7 @@ class Event(models.Model):
         ("B98", "B98"),
     ]
 
-    EventName = models.TextField(
+    EventName = models.CharField(
         max_length=200,
         help_text="The name of your event"
     )
@@ -150,7 +150,7 @@ class Event(models.Model):
     EventDate = models.DateTimeField(
         help_text="What date is your event being held?"
     )
-    EventDescription = models.CharField(
+    EventDescription = models.TextField(
         max_length=400,
         default="What will you be doing at this event?"
     )
