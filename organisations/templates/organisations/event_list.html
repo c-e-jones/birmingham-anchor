@@ -10,10 +10,9 @@
 
 <body>
     <h1>Event list</h1>
-    {% for post in object_list %}
+    {% for organisation in organisations %}
     <h2>{{model.EventName}}</h2>
-    <p>{{model.</p>
-    <p>Address Line 1: {{event.AddressLine1}}<br>{{event.AddressLine2}}<br>{{event.Postcode_1}} {{event.Postcode_2}}</p>
+    <p>Address: {{post.AddressLine1}}<br>{{event.AddressLine2}}<br>{{event.Postcode_1}} {{event.Postcode_2}}</p>
     {% endfor %}
 </body>
 
