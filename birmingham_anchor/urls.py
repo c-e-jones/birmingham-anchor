@@ -18,10 +18,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path('', include(anchornews.urls), name='anchornews-urls'),
     path('admin/', admin.site.urls),
-    path('organisations/', include('organisations.urls')),
-    path('', include('organisations.urls'), name='events'),
-    path('accounts/', include('allauth.urls')),
-    path('anchornews/', include('anchornews.urls')),
-    path('', include('anchornews.urls'), name='anchornews'),
 ]
