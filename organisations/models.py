@@ -150,12 +150,6 @@ class Event(models.Model):
     EventDate = models.DateTimeField(
         help_text="What date is your event being held?"
     )
-    EventTime = models.CharField(
-        max_length=24,
-        choices=TIMEOFDAY_CHOICES,
-        default=0,
-        help_text="What time of day is your event being held?"
-    )
     EventDescription = models.CharField(
         max_length=400,
         default="What will you be doing at this event?"
