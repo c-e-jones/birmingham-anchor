@@ -6,3 +6,8 @@ from .models import Event
 
 class EventList(generic.ListView):
     model = Event
+
+def frontpage(request):
+    events = Event.objects.all
+    
+    return render(request, 'core/event_list.html')
