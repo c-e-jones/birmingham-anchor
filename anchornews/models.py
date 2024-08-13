@@ -12,7 +12,7 @@ class Post(models.Model):
         max_length=200, unique_for_date='created-on'
     )
     author = models.ForeignKey(
-        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True
+        User, on_delete=models.CASCADE, null=True
     )
     genre = models.CharField(
         max_length=50, choices=[
