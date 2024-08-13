@@ -34,10 +34,3 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     objects = models.Manager()
-    published = Published()
-
-class Published(models.Manager):
-    # This allows the retrieval of published posts
-    def get_queryset(self) -> models.QuerySet:
-        return super().get_queryset().filter(status=Post.Status.PUBLISHED)
-    
