@@ -23,5 +23,5 @@ urlpatterns = [
     path('', include('organisations.urls'), name='events'),
     path('accounts/', include('allauth.urls')),
     path('anchornews/', include('anchornews.urls')),
-    path('', include('anchornews.urls'), name=anchornews),
+    path('', include('anchornews.urls'), name='anchornews'),
 ]
