@@ -1,10 +1,6 @@
-from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from django.contrib.auth.decorators import login_required
-from django.shortcuts import get_list_or_404, render, redirect
-from django.views.decorators.http import require_POST
-from django.views.generic import ListView
-from organisations.models import Event
+from django.shortcuts import render
 from django.views import generic
+from .models import Event
 
 # Create your views here.
 
